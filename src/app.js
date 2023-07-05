@@ -62,7 +62,7 @@ app.get(
         const errorObj = {
           error: `ERROR: No existe un producto con id: ${id}`
         };
-        res.status(404).json(errorObj);
+        res.send(errorObj);
       }
     } catch (error) {
       console.log(`ERROR: ${error.message}`);
