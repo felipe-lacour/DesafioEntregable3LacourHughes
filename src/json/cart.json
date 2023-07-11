@@ -1,0 +1,15 @@
+[
+	{
+		"id": "0b42a790-ebdd-491e-b1a4-4979435cf0a9",
+		"products": [
+			{
+				"id": 1,
+				"quantity": 5
+			},
+			{
+				"id": 10,
+				"quantity": 6
+			}
+		]
+	}
+]
