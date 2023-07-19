@@ -36,7 +36,7 @@ export class ProductManager {
           }
           products.push(newProduct);
           await fs.promises.writeFile(this.path, JSON.stringify(products, null, '\t'));
-          return {status: 'success', data: newProduct, message: 'Producto Creado'};
+          return {status: 'success', data: products, message: 'Producto Creado'};
         } else {
           throw {status: 'error', message: `ERROR: El producto con el codigo: ${code}, ya existe.`};
         }
@@ -112,7 +112,7 @@ export class ProductManager {
       if(productoExiste){
         const updatedProducts = products.filter(i => i.id !== parsedId);
         await fs.promises.writeFile(this.path, JSON.stringify(updatedProducts, null, '\t'));
-        return {status: 'success', message: 'Producto eliminado con exito.'};
+        return {status: 'success', message: 'Producto eliminado con exito.', data: updatedProducts};
       } else {
         throw {status: 'error', message: `No existe un producto con el id: ${id}`}
       };

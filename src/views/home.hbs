@@ -1,0 +1,16 @@
+<main class="max-w-4xl mx-auto my-12">
+  <h2 class="text-xl font-bold">Lista de Productos</h2>
+  <div class="grid grid-cols-3 gap-4">
+    {{#each products}}
+      <div class="flex flex-col text-left p-2 m-2 justify-between border-2 border-slate-300 rounded-lg">
+        <h2 class="text-lg font-bold text-center">{{this.title}}</h2>
+        <p>{{this.description}}</p>
+        <h3 class="font-bold text-md">${{this.price}}</h3>
+        <div class="flex justify-between">
+          <h4>Stock:{{this.stock}}</h4>
+          <h5 class="font-bold text-red-800">Id:{{this.id}}</h5>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</main>
